@@ -5,12 +5,14 @@
 搭建出了个小demo，实现互通
 
 目前了解到:
+```
     本地缓存(localStorage/sessionStorage)实现共享
     路由参数使用 ?name=xxx&age=18 ,如果使用 /a/b/c 这种类型无法获取
-
+```
 ### 注意
 #### main-app
 config/config.ts 添加
+```
 qiankun: {
     master: {
         apps: [
@@ -34,17 +36,20 @@ config/router.ts 添加
     microApp: 'sub-app-1',
     type: 'name1'
 },
+```
 
 #### sub-app-1 or sub-app-2 
 package.json    添加
 "name": "sub-app-1",
 
 umirc.ts    添加
+```
 qiankun: {
     slave: {},
 },
-
+```
 src/app.ts 没有添加，有修改
+```
 export const qiankun = {
   // 应用加载之前
   async bootstrap(props) {
@@ -59,3 +64,4 @@ export const qiankun = {
     console.log('app1 unmount', props);
   },
 };
+```
