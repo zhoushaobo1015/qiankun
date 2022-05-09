@@ -9,6 +9,19 @@
     本地缓存(localStorage/sessionStorage)实现共享
     路由参数使用 ?name=xxx&age=18 ,如果使用 /a/b/c 这种类型无法获取
 ```
+
+# 安装包
+```
+main
+
+yarn add -D qiankun @umijs/plugin-qiankun
+
+
+sub
+yarn add -D @umijs/plugin-qiankun
+
+```
+
 ### 注意
 #### main-app
 config/config.ts 添加
