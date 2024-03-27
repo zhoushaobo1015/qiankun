@@ -52,6 +52,8 @@ config/router.ts 添加
 ```
 
 #### sub-app-1 or sub-app-2 
+``` *** 子项目创建方式 yarn create @umijs/umi-app sub-app-1 *** ```
+
 package.json    添加
 "name": "sub-app-1",
 
